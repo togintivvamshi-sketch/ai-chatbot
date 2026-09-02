@@ -189,6 +189,8 @@ app.post("/chat", async (req, res) => {
 
 });
 
+app.get("/health", (req, res) => res.json({ ok: true, engine: using }));
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
